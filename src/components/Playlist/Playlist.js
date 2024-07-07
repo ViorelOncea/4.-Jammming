@@ -4,10 +4,12 @@ import "./Playlist.css";
 
 import TrackList from "../TrackList/TrackList";
 
+const onNameChange = props;
+
 const Playlist = (props) => {
   const handleNameChange = useCallback((event) => {
-      props.onNameChange(event.target.value);
-    }, [props.onNameChange]);
+      onNameChange(event.target.value);
+    }, [onNameChange]);
 
   return (
     <div className="Playlist">
